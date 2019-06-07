@@ -1,0 +1,3 @@
+# Telegram
+TELEGRAM_KEY = 'YOUR_TELEGRAM_TOKEN'
+
