@@ -2,7 +2,7 @@
 TELEGRAM_KEY = 'YOUR_TELEGRAM_TOKEN'
 
 # API Server
-HOST = 'localhost'
+HOST = '0.0.0.0'
 PORT = 5555
 
 # Model
