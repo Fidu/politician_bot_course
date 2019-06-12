@@ -11,23 +11,21 @@ logger = logging.getLogger('lstm_generator_server')
 app = Flask('lstm_generator_server')
 
 
-@app.route('/predict/<init_context>', methods=['GET'])
-@app.route('/predict/<init_context>/<int:len_result>', methods=['GET'])
-def predict(init_context, len_result=1000):
-    predict_result = sample(model, len_result, prime=init_context, top_k=5)
-    logger.debug(predict_result)
+# TODO: Añadir decorador
+def predict(init_context, len_result):
+    # TODO: Llamar al método sample (incluido en el fichero GeneratorTextLSTM.py) y guardarlo en predict_result
 
+    logger.debug(predict_result)
     return predict_result
 
 
 if __name__ == '__main__':
     logger.debug('Preparando datos y modelo...')
-    with open(PATH_DATA, 'r') as js_input:
-        data_input = json.load(js_input)
+    # TODO: Añadir código para cargar un json en la variable data_input (json.load)
     logger.debug('Datos cargados -> ' + str(data_input))
 
     global model
-    model = load_model(data_input, PATH_MODEL)
+    # TODO: Cargar modelo (llamar al método load_model del fichero GeneratorTextLSTM.py) y guardalor en model
 
     logger.info(f'Levantando servidor en {HOST} en el puerto {PORT} ...')
     app.run(host=HOST, debug=True, port=PORT)

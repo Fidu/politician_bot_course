@@ -11,10 +11,9 @@ logger = logging.getLogger('secure_pass_generator')
 app = Flask('secure_pass_generator')
 
 
-@app.route('/secure_pass/<int:len_pass>', methods=['GET'])
+# TODO: Añadir decorador
 def secure_pass(len_pass):
-    base_chars = string.ascii_letters + string.punctuation + string.digits
-    random_string = ''.join(choice(base_chars) for i in range(len_pass))
+    # TODO: Añadir código que genera un string de forma random -> [pista] mira los imports ;)
 
     logger.info(f'Contraseña generada -> {random_string}')
     return random_string

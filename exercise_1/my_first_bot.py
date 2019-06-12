@@ -8,14 +8,9 @@ logger = logging.getLogger('my_first_bot')
 
 
 def hello_someone(bot, update, args):
-    try:
-        name = str(args[0])
-    except IndexError:
-        logger.warning('No hay nombre en la petición devolviendo nombre por defecto...')
-        name = 'Señor X'
+    # TODO: coger parámetro de args y enviarlo al usuario
 
-    logger.info('Devolviendo resultado -> ' + f'Hola {name}')
-    bot.send_message(chat_id=update.message.chat_id, text=f'Hola {name}')
+    bot.send_message(chat_id=update.message.chat_id, text=texto_resultado)
 
 
 if __name__ == '__main__':

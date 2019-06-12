@@ -9,14 +9,10 @@ logger = logging.getLogger('generate_text_bot')
 
 
 def generate_text(bot, update, args):
-    try:
-        params = str(args[0]).replace('_', ' ') + '/' + str(args[1])
-    except IndexError:
-        logger.warning('No hay longitud de predicción devolviendo logitud por defecto...')
-        params = str(args[0]).replace('_', ' ')
+    # TODO: coger parámetros de args (contexto y longitud a inferir)
 
-    url = 'http://' + HOST + ':' + str(PORT)
-    result_predict = requests.get(url + '/predict/' + params).text
+    # TODO: Definir llamada_api para hacer la consulta a tu api y recibir la contraseña generada
+    result_predict = requests.get(llamada_api).text
 
     logger.debug('Predicción -> ' + str(result_predict))
     bot.send_message(chat_id=update.message.chat_id, text=f'{result_predict}')

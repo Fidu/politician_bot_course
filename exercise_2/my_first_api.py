@@ -14,15 +14,15 @@ def hello():
     return "My first API with Flask \n"
 
 
-@app.route('/string/<name>', methods=['GET'])
+# TODO: Añadir decorador
 def example_string(name):
-    result = f'Hola {name}!'
+    # TODO: Añadir comportamiento al recibir un string llamado name
     return result
 
 
-@app.route('/integer/<int:numeric>', methods=['GET'])
+# TODO: Añadir decorador
 def example_integer(numeric):
-    result = f'Esto es un entero -> {numeric}'
+    # TODO: Añadir comportamiento al recibir un entero llamado numerix
     return result
 
 

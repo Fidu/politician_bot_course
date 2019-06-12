@@ -9,15 +9,10 @@ logger = logging.getLogger('secure_pass_bot')
 
 
 def generate_pass(bot, update, args):
-    try:
-        len_pass = int(args[0])
-    except (IndexError, ValueError):
-        logger.warning('No hay parámetro de longitud o el parámetro no es un entero devolviendo valor por defecto...')
-        len_pass = 8
+    # TODO: coger parámetro de args (entero para longitud de contraseña)
 
-    url = 'http://' + HOST + ':' + str(PORT)
-
-    secure_pass = requests.get(url + '/secure_pass/' + str(len_pass)).text
+    # TODO: Definir llamada_api para hacer la consulta a tu api y recibir la contraseña generada
+    secure_pass = requests.get(llamada_api).text
     logger.info('Devolviendo resultado -> ' + f'Contraseña generada: {secure_pass}')
     bot.send_message(chat_id=update.message.chat_id, text=f'Contraseña generada: {secure_pass}')
 
