@@ -13,7 +13,7 @@ Si tienes instalado Docker simplemente es necesario ejecutar lo siguiente, cambi
 **[USER_PATH]** por la ruta donde quieras que se clone el proyecto:
 
 ```bash
-$ sudo docker run -i -t -p 5555:5555 -v [USER_PATH]:/root/politician_bot_course edgarperezsampedro/politician_bot_course:latest​
+$ sudo docker run -i -t -p 5555:5555 -v [USER_PATH]:/root/politician_bot_course  edgarperezsampedro/politician_bot_course:latest
 ```
 
 ### Preparación del entorno de forma manual
