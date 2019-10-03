@@ -9,7 +9,7 @@ El taller se puede seguir a través de la imagen [Docker](https://www.docker.com
 a medida para el taller, o bien instalando lo necesario de forma manual.
 
 ### Preparación de entorno vía Docker
-Si tienes instalado Docker simplemente es necesario ejecutar lo siguiente, cambiando 
+Si tienes instalado Docker simplemente **es necesario crear un directorio vacío** y lo siguiente, cambiando 
 **[USER_PATH]** por la ruta donde quieras que se clone el proyecto:
 
 ```bash
